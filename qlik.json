@@ -1,0 +1,57 @@
+{
+
+	"For_Loop": {
+		"prefix": "for",
+		"body": [
+			"FOR ${1:varname}=0 to NoOfRows('${2:tablename}')",
+			"LET var = Peek('${3:fieldname}', $(${1:varname}), '${2:tablename}');",
+			"NEXT ${1:varname};"
+		],
+		"description": "For Loop"
+	},
+
+
+	"Peek": {
+		"prefix": "Peek",
+		"body": [
+			"Peek('${3:fieldname}', $(${1:varname}), '${2:tablename}');"
+		],
+		"description": "Peek"
+	},
+
+	"Drop_Field": {
+		"prefix": "df",
+		"body": [
+			"DROP FIELD ${1:FieldName};"
+		],
+		"description": "Drop Field"
+	},
+
+	"Drop_Table": {
+		"prefix": "dt",
+		"body": [
+			"DROP TABLE ${1:TableName};"
+		],
+		"description": "Drop Table"
+	},
+
+	"Rename_Field": {
+		"prefix": "rf",
+		"body": [
+			"RENAME FIELD ${1:FieldFrom} TO ${2:FieldTo};"
+		],
+		"description": "Rename Field"
+	},
+
+	"Rename_Table": {
+		"prefix": "rt",
+		"body": [
+			"RENAME TABLE ${1:TableFrom} TO ${2:TableTo};"
+		],
+		"description": "Rename Table"
+	}
+
+	
+
+
+}
